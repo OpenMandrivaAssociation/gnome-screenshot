@@ -1,8 +1,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-screenshot
-Version:	3.6.1
-Release:	7
+Version:	3.14.0
+Release:	1
 Summary:	GNOME Screenshot utility
 License:	GPLv2+
 Group:		File tools
@@ -24,7 +24,7 @@ Gnome screenshot utility.
 %apply_patches
 
 %build
-%configure2_5x \
+%configure \
 	--disable-schemas-compile
 
 %make
@@ -42,6 +42,7 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %{_bindir}/%{name}
 %{_datadir}/GConf/gsettings/gnome-screenshot.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-screenshot.gschema.xml
-%{_datadir}/applications/%{name}.desktop
 %{_mandir}/man1/%{name}.1.*
+%{_datadir}/applications/org.gnome.Screenshot.desktop
+%{_datadir}/dbus-1/services/org.gnome.Screenshot.service
 

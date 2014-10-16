@@ -1,3 +1,5 @@
-sources:
-  "gnome-screenshot-3.4.1.tar.xz": f91ee2830c783659d30ddfd6be93c15477c06ab9
+removed_sources:
+  gnome-screenshot-3.4.1.tar.xz: f91ee2830c783659d30ddfd6be93c15477c06ab9
   gnome-screenshot-3.6.1.tar.xz: 9069bfe45971035b93b116d7085edb1747ecdc21
+sources:
+  gnome-screenshot-3.14.0.tar.xz: 0ab91c20755caa06fa591bd67f63e94845df5835
