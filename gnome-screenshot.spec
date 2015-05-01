@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-screenshot
-Version:	 3.16.0
+Version:	3.16.0
 Release:	2
 Summary:	GNOME Screenshot utility
 License:	GPLv2+
@@ -45,4 +45,5 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %{_mandir}/man1/%{name}.1.*
 %{_datadir}/applications/org.gnome.Screenshot.desktop
 %{_datadir}/dbus-1/services/org.gnome.Screenshot.service
+%{_datadir}/appdata/org.gnome.Screenshot.appdata.xml
 
