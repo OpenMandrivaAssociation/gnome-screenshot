@@ -2,7 +2,7 @@
 
 Name:		gnome-screenshot
 Version:	3.18.0
-Release:	3
+Release:	4
 Summary:	GNOME Screenshot utility
 License:	GPLv2+
 Group:		File tools
