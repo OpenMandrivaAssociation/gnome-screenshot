@@ -14,6 +14,7 @@ BuildRequires:	pkgconfig(gtk+-3.0) >= 3.0.0
 BuildRequires:	pkgconfig(libcanberra-gtk3)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	meson
 Conflicts:	gnome-utils < 1:3.3.1
 
 %description
@@ -24,13 +25,11 @@ Gnome screenshot utility.
 %apply_patches
 
 %build
-%configure \
-	--disable-schemas-compile
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 #handle docs with files section
 rm -rf %{buildroot}%{_defaultdocdir}
