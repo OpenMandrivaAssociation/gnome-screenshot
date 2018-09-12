@@ -14,6 +14,8 @@ BuildRequires:	pkgconfig(gtk+-3.0) >= 3.0.0
 BuildRequires:	pkgconfig(libcanberra-gtk3)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(appstream-glib)
 BuildRequires:	meson
 Conflicts:	gnome-utils < 1:3.3.1
 
