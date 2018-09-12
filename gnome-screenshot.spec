@@ -1,8 +1,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-screenshot
-Version:	3.18.0
-Release:	4
+Version:	3.26.0
+Release:	1
 Summary:	GNOME Screenshot utility
 License:	GPLv2+
 Group:		File tools
@@ -14,6 +14,9 @@ BuildRequires:	pkgconfig(gtk+-3.0) >= 3.0.0
 BuildRequires:	pkgconfig(libcanberra-gtk3)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(appstream-glib)
+BuildRequires:	meson
 Conflicts:	gnome-utils < 1:3.3.1
 
 %description
@@ -24,13 +27,11 @@ Gnome screenshot utility.
 %apply_patches
 
 %build
-%configure \
-	--disable-schemas-compile
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 #handle docs with files section
 rm -rf %{buildroot}%{_defaultdocdir}
@@ -45,5 +46,5 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %{_mandir}/man1/%{name}.1.*
 %{_datadir}/applications/org.gnome.Screenshot.desktop
 %{_datadir}/dbus-1/services/org.gnome.Screenshot.service
-%{_datadir}/appdata/org.gnome.Screenshot.appdata.xml
+%{_datadir}/metainfo/org.gnome.Screenshot.metainfo.xml
 
