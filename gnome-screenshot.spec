@@ -46,5 +46,5 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %{_mandir}/man1/%{name}.1.*
 %{_datadir}/applications/org.gnome.Screenshot.desktop
 %{_datadir}/dbus-1/services/org.gnome.Screenshot.service
-%{_datadir}/appdata/org.gnome.Screenshot.appdata.xml
+#{_datadir}/appdata/org.gnome.Screenshot.appdata.xml
 
