@@ -1,14 +1,15 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-screenshot
-Version:	3.30.0
-Release:	2
+Version:	3.32.0
+Release:	1
 Summary:	GNOME Screenshot utility
 License:	GPLv2+
 Group:		File tools
 Url:		http://live.gnome.org/GnomeUtils/Baobab
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
+BuildRequires:	gettext
 BuildRequires:	pkgconfig(glib-2.0) >= 2.31.0
 BuildRequires:	pkgconfig(gtk+-3.0) >= 3.0.0
 BuildRequires:	pkgconfig(libcanberra-gtk3)
@@ -47,4 +48,6 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %{_datadir}/applications/org.gnome.Screenshot.desktop
 %{_datadir}/dbus-1/services/org.gnome.Screenshot.service
 %{_datadir}/metainfo/org.gnome.Screenshot.metainfo.xml
+%{_iconsdir}/hicolor/scalable/apps/org.gnome.Screenshot.svg
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Screenshot-symbolic.svg
 
