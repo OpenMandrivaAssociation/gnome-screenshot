@@ -44,7 +44,7 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %files -f %{name}.lang
 %doc NEWS
 %{_bindir}/%{name}
-%{_datadir}/GConf/gsettings/gnome-screenshot.convert
+#{_datadir}/GConf/gsettings/gnome-screenshot.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-screenshot.gschema.xml
 %{_mandir}/man1/%{name}.1.*
 %{_datadir}/applications/org.gnome.Screenshot.desktop
