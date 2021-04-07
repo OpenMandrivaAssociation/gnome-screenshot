@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-screenshot
-Version:	3.38.0
+Version:	40.0
 Release:	1
 Summary:	GNOME Screenshot utility
 License:	GPLv2+
