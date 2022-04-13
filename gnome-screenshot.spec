@@ -8,6 +8,8 @@ License:	GPLv2+
 Group:		File tools
 Url:		http://live.gnome.org/GnomeUtils/Baobab
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+# Upstream fix for compilation with meson 0.60+
+Patch0:   https://gitlab.gnome.org/GNOME/gnome-screenshot/-/commit/b60dad3c2536c17bd201f74ad8e40eb74385ed9f.patch
 BuildRequires:	intltool
 BuildRequires:	gettext
 BuildRequires:  cmake
